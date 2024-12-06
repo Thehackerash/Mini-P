@@ -3,7 +3,9 @@ from PIL import Image
 from vector_emb import get_best_match
 from object_crop import crop_and_save_objects
 from prompt_chain import multi_level_cot
+from draw_box import draw_box_on_image
 from blip2.blip2_inference import generate_features
+<<<<<<< HEAD
 import cv2
 
 inputImagePath = "inputImage.jpg"
@@ -48,36 +50,46 @@ def annotateInputImage(image_path, file_path, index, output_path, box_color=(0, 
 
     cv2.imwrite(output_path, image)
     print(f"Annotated image saved to: {output_path}")
+=======
+import ast
+
+>>>>>>> 1e66726608fd98d7d3c16d4a23200069a35295fd
 
 def main():
     path = input("enter the path of the image: ")
     output_dir = "cropped_objects"
     # os.makedirs(output_dir, exist_ok=True)
     crop_and_save_objects(path, output_dir)
-    
 
-    required_desc=multi_level_cot("Open A Parcel")
-
-    folder_path = './cropped_objects'
+    required_desc = multi_level_cot("Keep the water warm")
+    folder_path = "./cropped_objects"
 
     # Iterate through the folder
-    captions = []
+    captions = {}
     if os.path.exists(folder_path) and os.path.isdir(folder_path):
         for filename in os.listdir(folder_path):
-            if filename.lower().endswith('.jpg'):
+            if filename.lower().endswith(".jpg"):
                 relative_path = os.path.join(folder_path, filename)
                 text_desc = generate_features(relative_path)
-                captions.append(text_desc)
-
-    # text_desc = ["dull","pointy","elongated"]
+                num = filename[filename.find("_") + 1 : filename.find(".jpg")]
+                captions[text_desc] = num
 
     print(captions)
+<<<<<<< HEAD
 
     req_ind = get_best_match(captions, required_desc)
     print(req_ind)
     annotateInputImage(inputImagePath, logFilePath, req_ind, outputImagePath, box_color=(0, 255, 0), box_label="Required Object")
 
 
+=======
+    req_ind = get_best_match(list(captions.keys()), required_desc)
+    data = open("coordinates.txt")
+    coord_dict = ast.literal_eval(data.read())
+    data.close()
+    coordinates = coord_dict[captions[req_ind]]
+    draw_box_on_image(path, coordinates, "selected.jpeg")
+>>>>>>> 1e66726608fd98d7d3c16d4a23200069a35295fd
 
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@ def generate_features(image_path):
     model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-large")
     raw_image = Image.open(image_path).convert('RGB')
     text = f""
-    print(image_path)
+    # print(image_path)
     inputs = processor(raw_image, text, return_tensors="pt")
     out = model.generate(**inputs)
     caption = processor.decode(out[0], skip_special_tokens=True)

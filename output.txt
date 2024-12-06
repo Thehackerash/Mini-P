@@ -1,0 +1,230 @@
+(venv) ➜  Mini-P git:(main) ✗ python3 main.py
+enter the path of the image: ./bottle.jpeg
+
+0: 640x448 2 bottles, 173.7ms
+Speed: 3.1ms preprocess, 173.7ms inference, 0.5ms postprocess per image at shape (1, 3, 640, 448)
+Saved: cropped_objects/object_1.jpg
+Saved: cropped_objects/object_2.jpg
+
+--- Objects Identified ---
+ 1. **Hot water bottle**
+2. **Heating pad**
+3. **Electric blanket**
+4. **Microwaveable heating pack**
+5. **Boiled water in a thermos**
+6. **Warm towel**
+7. **Reusable hand warmer**
+8. **Hot soup or tea in a thermos**
+9. **Heating stone**
+10. **Electric water heater**
+11. **Incandescent light bulb**
+12. **Candle**
+13. **Solar-powered heater**
+14. **Chemical heat pad**
+15. **Wheat bag**
+16. **Rice bag**
+17. **Salt bag**
+18. **Compost pile**
+19. **Firepit**
+20. **Stove**
+
+--- Rationales Generated ---
+ **1. Hot water bottle**
+- **Rationale:** Contains warm water that can be used to keep water warm.
+- **Visual features:** Typically made of rubber or PVC, has a wide mouth for filling, and can be sealed to prevent leaking.
+
+**2. Heating pad**
+- **Rationale:** Electrically heated pad that can be placed on or around water to keep it warm.
+- **Visual features:** Flexible, rectangular or circular shape, with a cord for plugging into an electrical outlet.
+
+**3. Electric blanket**
+- **Rationale:** Electrically heated blanket that can be wrapped around water to keep it warm.
+- **Visual features:** Large, rectangular blanket with a cord for plugging into an electrical outlet.
+
+**4. Microwaveable heating pack**
+- **Rationale:** Contains a gel or other substance that can be heated in a microwave and then placed on or around water to keep it warm.
+- **Visual features:** Small, rectangular or circular pack with a microwave-safe cover.
+
+**5. Boiled water in a thermos**
+- **Rationale:** Insulated thermos that keeps boiled water hot for extended periods.
+- **Visual features:** Cylindrical or flask-shaped container with a double-walled construction and a sealed lid.
+
+**6. Warm towel**
+- **Rationale:** Towel that has been heated and can be wrapped around water to keep it warm.
+- **Visual features:** Rectangular or square cloth made of absorbent material.
+
+**7. Reusable hand warmer**
+- **Rationale:** Small, reusable device that generates heat when activated.
+- **Visual features:** Pocket-sized, typically made of metal or plastic, with a button or trigger to activate the heat.
+
+**8. Hot soup or tea in a thermos**
+- **Rationale:** Insulated thermos that keeps hot soup or tea warm for extended periods.
+- **Visual features:** Similar to a thermos for boiled water, but with a wider opening for pouring liquids.
+
+**9. Heating stone**
+- **Rationale:** Stone that has been heated and can be placed in water to keep it warm.
+- **Visual features:** Smooth, round or oval stone that can withstand high temperatures.
+
+**10. Electric water heater**
+- **Rationale:** Electrical appliance that heats water and can be used to keep water warm.
+- **Visual features:** Tank or tankless unit, typically installed under a sink or in a utility room.
+
+**11. Incandescent light bulb**
+- **Rationale:** Light bulb that emits heat as a byproduct of producing light.
+- **Visual features:** Glass bulb with a filament that glows when electricity passes through it.
+
+**12. Candle**
+- **Rationale:** Burns fuel to produce heat and light, which can be used to keep water warm.
+- **Visual features:** Cylindrical or jar-shaped container with a wick that is lit and produces a flame.
+
+**13. Solar-powered heater**
+- **Rationale:** Collects solar energy and converts it into heat, which can be used to keep water warm.
+- **Visual features:** Panel of photovoltaic cells that are mounted in a frame or on a roof.
+
+**14. Chemical heat pad**
+- **Rationale:** Contains chemicals that react to each other and produce heat.
+- **Visual features:** Small, disposable pad that is activated by bending or shaking.
+
+**15. Wheat bag**
+- **Rationale:** Filled with wheat grains that have been heated and can be used to keep water warm.
+- **Visual features:** Rectangular or square bag made of cloth and filled with wheat grains.
+
+**16. Rice bag**
+- **Rationale:** Similar to a wheat bag, but filled with rice grains.
+- **Visual features:** Similar to a wheat bag, but filled with rice grains.
+
+**17. Salt bag**
+- **Rationale:** Filled with salt that has been heated and can be used to keep water warm.
+- **Visual features:** Similar to a wheat or rice bag, but filled with salt.
+
+**18. Compost pile**
+- **Rationale:** Organic materials decompose and produce heat, which can be used to keep water warm.
+- **Visual features:** Large pile of organic materials, such as leaves, grass clippings, and food scraps.
+
+**19. Firepit**
+- **Rationale:** Burns fuel to produce heat and light, which can be used to keep water warm.
+- **Visual features:** Circular or square pit lined with fireproof materials, with a grate for holding fuel.
+
+**20. Stove:**
+- **Rationale:** Burns fuel to produce heat, which can be used to heat water and keep it warm.
+- **Visual features:** Cooking appliance with a burner or burners and a flat surface for placing pots and pans.
+
+--- Visual Features Summarized ---
+ Hot water bottle: rubber/PVC, wide mouth, sealable; Heating pad: flexible, rectangular/circular, cord; Electric blanket: large, rectangular, cord; Microwaveable heating pack: rectangular/circular, microwave-safe cover; Boiled water in a thermos: cylindrical/flask-shaped, double-walled, sealed lid; Warm towel: rectangular/square, absorbent cloth; Reusable hand warmer: pocket-sized, metal/plastic, button/trigger; Hot soup/tea in a thermos: thermos with wider opening; Heating stone: smooth, round/oval, withstands high temperatures; Electric water heater: tank/tankless, under sink/utility room; Incandescent light bulb: glass bulb, glowing filament; Candle: cylindrical/jar-shaped, wick, flame; Solar-powered heater: photovoltaic cells, frame/roof; Chemical heat pad: disposable, activated by bending/shaking; Wheat bag: rectangular/square, cloth, wheat grains; Rice bag: rectangular/square, cloth, rice grains; Salt bag: rectangular/square, cloth, salt; Compost pile: organic materials; Firepit: circular/square, fireproof materials, grate; Stove: burner/burners, flat surface
+['there is a bottle of water sitting on the floor next to a wall', 'a close up of a metal water bottle on a counter']
+there is a bottle of water sitting on the floor next to a wall
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1732353649.282740  352681 init.cc:229] grpc_wait_for_shutdown_with_timeout() timed out.
+(venv) ➜  Mini-P git:(main) ✗ python3 main.py
+enter the path of the image: ./bottle.jpeg
+
+0: 640x448 2 bottles, 161.4ms
+Speed: 1.8ms preprocess, 161.4ms inference, 0.6ms postprocess per image at shape (1, 3, 640, 448)
+Saved: cropped_objects/object_1.jpg
+Saved: cropped_objects/object_2.jpg
+
+--- Objects Identified ---
+ 1. **Thermos**: Specifically designed to insulate and maintain the temperature of liquids.
+2. **Vacuum Flask**: Similar to a thermos, it creates a vacuum between two layers of glass or metal to reduce heat transfer.
+3. **Double-Walled Bottle**: Features two layers of material with a vacuum or insulation between them to minimize heat loss.
+4. **Travel Mug**: Often made of insulated materials, travel mugs keep beverages warm for extended periods.
+5. **Coffee Carafe**: Typically made of insulated glass or metal, coffee carafes help retain the heat of freshly brewed coffee.
+6. **Teapot**: Many teapots are designed with double-walls or insulation to keep tea warm.
+7. **Hydro Flask**: A popular brand of insulated bottles known for their durability and ability to maintain temperature for hours.
+8. **Yeti Tumbler**: A premium insulated tumbler that keeps drinks cold or hot for extended periods.
+9. **Stanley Thermos**: A classic thermos brand that offers various sizes and options for keeping liquids warm.
+10. **Aladdin Sipper**: A popular insulated sipper bottle with a wide mouth and a straw.
+11. **Bubba Keg**: A durable insulated bottle designed for outdoor activities, keeping drinks cold or warm for hours.
+12. **CamelBak Eddy+ Bottle**: A lightweight and leak-proof bottle with insulation to keep drinks at a desired temperature.
+13. **Contigo Autoseal Bottle**: Features a spill-proof autoseal lid and double-wall insulation to maintain temperature.
+14. **Zojirushi Mr. Bento**: A popular lunchbox system with an insulated food jar to keep food warm or cold.
+15. **Sistema Microwave Food Container**: A microwave-safe container with insulation to keep food hot after reheating.
+16. **Thermal Lunch Bag**: Insulated lunch bags can be used to keep food warm or cold for several hours.
+17. **Camp Stove**: A portable stove can be used to heat water or food directly.
+18. **Fire Pit**: A larger outdoor fire source can be used to boil water or warm up food.
+19. **Ember Mug**: A self-heating mug that maintains a desired temperature for hot beverages.
+20. **Kettle**: A kitchen appliance specifically used to boil water and can be kept warm on a stove or hot plate.
+
+--- Rationales Generated ---
+ **Thermos**:
+- Cylindrical shape with a narrow opening to minimize heat loss.
+- Double-walled construction with a vacuum between the layers, creating a barrier to heat transfer.
+
+**Vacuum Flask**:
+- Similar to a thermos, with a double-walled construction and a vacuum to reduce heat transfer.
+- Often made of durable materials like stainless steel or glass, providing insulation and protection.
+
+**Double-Walled Bottle**:
+- Features two layers of material, typically with a vacuum or insulation between them, creating a thermal barrier.
+- May have a wide mouth for easy filling and cleaning, and a variety of cap options for different uses.
+
+**Travel Mug**:
+- Designed to be portable and easy to carry, often with a handle or strap.
+- Insulated construction with materials like plastic, metal, or ceramic, keeping beverages warm for hours.
+
+**Coffee Carafe**:
+- Typically made of insulated glass or metal, with a narrow opening to minimize evaporation.
+- Designed to retain the heat of freshly brewed coffee, allowing for multiple servings over time.
+
+**Teapot**:
+- Often designed with double-walls or insulation to keep tea warm for extended periods.
+- May have a lid or stopper to prevent heat loss and preserve the flavor of the tea.
+
+**Hydro Flask**:
+- Double-walled construction with a vacuum between the layers for maximum insulation.
+- Durable materials like stainless steel and a powder-coated exterior for protection and aesthetics.
+
+**Yeti Tumbler**:
+- Similar to a Hydro Flask, with double-wall insulation and a durable construction.
+- Designed to keep drinks cold or hot for extended periods, with a lid that minimizes heat loss.
+
+**Stanley Thermos**:
+- Classic thermos design with a durable construction and a variety of styles and sizes.
+- Double-wall insulation and a wide mouth for easy filling and cleaning.
+
+**Aladdin Sipper**:
+- Insulated construction with a wide mouth and a straw for easy drinking.
+- May have a spill-proof lid to prevent leaks and maintain temperature.
+
+**Bubba Keg**:
+- Rugged construction designed for outdoor activities, with double-wall insulation to keep drinks cold or warm for hours.
+- May have a handle or strap for portability and a variety of cap options.
+
+**CamelBak Eddy+ Bottle**:
+- Lightweight and leak-proof construction with double-wall insulation to maintain temperature.
+- Features a bite valve and a variety of cap options for different uses.
+
+**Contigo Autoseal Bottle**:
+- Double-wall insulation and a spill-proof autoseal lid to prevent leaks and maintain temperature.
+- May have a handle or strap for portability and a variety of color and style options.
+
+**Zojirushi Mr. Bento**:
+- Insulated food jar designed to keep food warm or cold for hours.
+- Typically made of stainless steel with a variety of sizes and compartments for different types of food.
+
+**Sistema Microwave Food Container**:
+- Microwave-safe with insulation to keep food hot after reheating.
+- Often has a lid with a vent to release steam and prevent splatters.
+
+**Thermal Lunch Bag**:
+- Insulated construction to keep food or drinks warm or cold for several hours.
+- May have multiple compartments and pockets for organizing different items and maintaining temperature.
+
+**Camp Stove**:
+- Portable stove that can be used to heat water or food directly, providing a convenient way to keep things warm in outdoor settings.
+
+**Fire Pit**:
+- Larger outdoor fire source that can be used to boil water or warm up food, creating a cozy and communal atmosphere.
+
+**Ember Mug**:
+- Self-heating mug that maintains a desired temperature for hot beverages.
+- Features a built-in battery and a mobile app for controlling the temperature and monitoring battery life.
+
+**Kettle**:
+- Kitchen appliance specifically used to boil water, with a spout for pouring and a handle for safety.
+- May have features like a whistle to indicate when the water is boiling, or a temperature control to maintain a desired heat level.
+
+--- Visual Features Summarized ---
+ Thermos: Cylindrical shape, narrow opening, double-walled, vacuum, plastic/metal Vacuum Flask: Double-walled, vacuum, durable materials (stainless steel/glass) Double-Walled Bottle: Two layers, vacuum/insulation, wide mouth, plastic/metal Travel Mug: Portable, handle/strap, insulated construction, plastic/metal/ceramic Coffee Carafe: Insulated glass/metal, narrow opening Teapot: Double-walled/insulated, lid/stopper, ceramic/metal Hydro Flask: Double-walled, vacuum, stainless steel, powder-coated exterior Yeti Tumbler: Double-walled, vacuum, durable construction, lid Stanley Thermos: Double-walled, wide mouth, durable construction Aladdin Sipper: Insulated, wide mouth, straw, spill-proof lid, plastic Bubba Keg: Double-walled, rugged construction, handle/strap, cap options CamelBak Eddy+ Bottle: Double-walled, lightweight, leak-proof, bite valve, cap options Contigo Autoseal Bottle: Double-walled, spill-proof autoseal lid, handle/strap Zojirushi Mr. Bento: Double-walled, stainless steel, multiple compartments Sistema Microwave Food Container: Insulated, microwave-safe, lid with vent, plastic Thermal Lunch Bag: Insulated construction, multiple compartments Camp Stove: Portable, heats water/food directly Fire Pit: Outdoor fire source, boils water/warms food Ember Mug: Self-heating, battery, temperature control, ceramic Kettle: Spout, handle, kitchen appliance
+['there is a bottle of water sitting on the floor next to a wall', 'a close up of a metal water bottle on a counter']
+a close up of a metal water bottle on a counter

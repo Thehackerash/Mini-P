@@ -22,7 +22,7 @@ def affordance_level_prompt(task, objects):
 
 def visual_feature_prompt(task, rationales):
     return f"""For the task '{task}', based on these rationales: {rationales}, 
-    summarize the corresponding visual features for each object. in form of a single string"""
+    summarize the corresponding visual features and material (like plastic, metal) for each object. in form of a single string"""
 
 # Multi-Level Chain-of-Thought Process
 def multi_level_cot(task):
